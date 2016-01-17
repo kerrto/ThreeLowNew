@@ -7,11 +7,38 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dice.h"
+#import "InputCollector.h"
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+
+
+    InputCollector *firstLine = [[InputCollector alloc]init];
+    
+    NSString *welcomeLine = @"Welcome to Three Low! Would you like to continue?y/n\n";
+    NSString *userInput = [firstLine inputForPrompt:welcomeLine];
+    
+    if([userInput isEqualToString:@"y"]) {
+       
+        Dice *firstRoll =[[Dice alloc]init];
+        [firstRoll roll];
+//        [firstRoll getHolds];
+//        [firstRoll printHolds];
     }
-    return 0;
-}
+        
+        
+        
+        
+        
+//Dice *secondRoll =[[Dice alloc]init];
+//      [secondRoll roll];
+//            
+//            
+//Dice *thirdRoll =[[Dice alloc]init];
+//    [thirdRoll roll];
+//Dice *fourthRoll =[[Dice alloc]init];
+//    [fourthRoll roll];
+//Dice *fifthRoll =[[Dice alloc]init];
+//    [fifthRoll roll];
+        }
